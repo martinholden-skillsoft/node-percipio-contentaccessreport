@@ -1,6 +1,6 @@
 {
 	"name": "node-percipio-contentaccessreport",
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"description": "Retrieve a Content Access Report from Percipio in JSON format and save locally",
 	"main": "app.js",
 	"scripts": {
