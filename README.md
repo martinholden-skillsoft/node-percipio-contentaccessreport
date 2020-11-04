@@ -34,10 +34,10 @@ The Percipio [https://api.percipio.com/reporting/api-docs/#/%2Fv1/requestContent
 
 The Percipio[https://api.percipio.com/reporting/api-docs/#/%2Fv1/getReportRequest](https://api.percipio.com/reporting/api-docs/#/%2Fv1/getReportRequest) API will then be called to download the generated data.
 
-The returned JSON will be stored in:
+The default configuration returns JSON and it will be stored in:
 
 ```
-results/YYYYMMDD_hhmmss_results.csv
+results/YYYYMMDD_hhmmss_results.json
 ```
 
 The timestamp component is based on UTC time when the script runs:
