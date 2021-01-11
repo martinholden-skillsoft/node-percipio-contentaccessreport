@@ -11,17 +11,18 @@ Retrieve [Content Access Report](https://documentation.skillsoft.com/en_us/perci
 
 Once you have copied this repository set the following NODE ENV variables, or config the [.env](.env) file
 
-| ENV       | Required | Description                                                                                                                                                                                                                                                                                      |
-| --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ORGID     | Required | This is the Percipio Organiation UUID for your Percipio Site                                                                                                                                                                                                                                     |
-| BEARER    | Required | This is the Percipio Bearer token for a Service Account with permissions for services.                                                                                                                                                                                         |
+| ENV       | Required | Description |
+| --------- | -------- | ----------- |
+| ORGID     | Required | This is the Percipio Organiation UUID for your Percipio Site |
+| BEARER    | Required | This is the Percipio Bearer token for a Service Account with permissions for services. |
 | BASEURL | Required | This is set to the base URL for the Percipio data center. For US hosted use: https://api.percipio.com For EU hosted use: https://dew1-api.percipio.com |
 | TIMEFRAME | Optional | This is a filter criteria that specifies the timeframe for the results.<br/><br/>The report start/end dates are calculated dynamically based on when the report is submitted date.<br/><br/>Options are: DAY, WEEK, THIRTY_DAYS, CALENDAR_MONTH<br/><br/>If left empty/null THIRTY_DAYS is used. |
 | START     | Optional | This is a filter criteria that specifies the START date for the report in ISO8601 format.<br/><br/>The END option must be specified if using this.<br/><br/>The TIMEFRAME option must be null if using this.                                                                                     |
-| END     | Optional | This is a filter criteria that specifies the END date for the report in ISO8601 format.<br/><br/>The START option must be specified if using this.<br/><br/>The TIMEFRAME option must be null if using this                                                                                       |
+| END     | Optional | This is a filter criteria that specifies the END date for the report in ISO8601 format.<br/><br/>The START option must be specified if using this.<br/><br/>The TIMEFRAME option must be null if using this |
 
 ## Configuring the API call
-Make the config changes in [config/default.js](config/default.js) file, to specify the request criteria for the report.
+Make any additional config changes in [config/default.js](config/default.js) file, to specify the request criteria for the report.
+
 ## How to use it
 
 Run the app
@@ -34,7 +35,7 @@ The Percipio [https://api.percipio.com/reporting/api-docs/#/%2Fv1/requestContent
 
 The Percipio[https://api.percipio.com/reporting/api-docs/#/%2Fv1/getReportRequest](https://api.percipio.com/reporting/api-docs/#/%2Fv1/getReportRequest) API will then be called to download the generated data.
 
-The default configuration returns JSON and it will be stored in:
+The default configuration returns JSON and the data will be stored in:
 
 ```
 results/YYYYMMDD_hhmmss_results.json
